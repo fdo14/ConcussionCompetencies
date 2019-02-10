@@ -5,7 +5,7 @@ const logger = require("morgan");
 const Data = require("./data");
 const Comment = require("./comments");
 
-const API_PORT = 3001;
+const API_PORT = 5001;
 const app = express();
 const router = express.Router();
 
