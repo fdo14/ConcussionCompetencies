@@ -18,7 +18,7 @@ class ContactForm extends React.Component{
     event.preventDefault();
     axios({
             method: "POST",
-            url:"http://localhost:3002/send",
+            url:"http://142.93.90.49:5002/send",
             data: {
                 name: this.state.firstName,
                 subject: this.state.email,
