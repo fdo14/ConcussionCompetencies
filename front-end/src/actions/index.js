@@ -46,13 +46,14 @@ export const createPost = (formValues, postArray) => async (dispatch, getState) 
         mm = '0' + mm;
       }
       today = mm + '/' + dd + '/' + yyyy;
-
       var idToBeAdded;
       if(postArray.length > 0){
-        let idToBeAdded = postArray[postArray.length-1].id + 1;
+        idToBeAdded = postArray[postArray.length-1].id + 1;
       } else {
         idToBeAdded = 0;
       }
+
+      console.log(postArray.length);
 
       const response = await axios.post("http://142.93.90.49:5001/api/putData", {
         id: idToBeAdded,
@@ -68,6 +69,7 @@ export const createPost = (formValues, postArray) => async (dispatch, getState) 
 
       dispatch({type: CREATE_POST, payload: response.data});
       history.push('/blog');
+
 };
 
 export const fetchPosts = () => async dispatch => {
