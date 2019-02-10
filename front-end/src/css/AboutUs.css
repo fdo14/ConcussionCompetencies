@@ -1,0 +1,45 @@
+.cardClass{
+  margin-top: 20px;
+}
+
+
+
+body{
+  overflow: scroll;
+}
+
+.card{
+  height: 450px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .row{
+    margin-top: 13vh;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cardClass{
+    margin-left: 15vw;
+  }
+}
+
+@media (max-width: 530px) {
+  .cardClass{
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 430px) {
+  .cardClass{
+    margin-left: 2.5%;
+  }
+}
+
+@media (max-width: 400px) {
+  .cardClass{
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,51 @@
+.menuBlog{
+  margin-bottom: none !important;
+}
+
+.topPadding{
+  margin-top: 15px;
+}
+
+
+.item{
+  text-align: left;
+  margin-bottom: 15px;
+
+}
+
+.description{
+  margin-top: 5px;
+}
+
+.container{
+  width: 100% !important;
+}
+
+@media (min-width: 768px) {
+  html, body {
+    overflow: hidden;
+    width: 100%;
+  }
+  .colRight{
+      height: 100vh;
+      overflow: scroll;
+      margin-right: 0 !important;
+      padding-bottom: 50px;
+  }
+
+  .colLeft{
+      height: 100vh;
+      overflow: scroll;
+  }
+}
+
+.hrRule{
+  size: 30px;
+  border-bottom: 2px solid rgba(34,36,38,.15);
+}
+
+.comments{
+  text-align: left !important;
+  background-color:rgba(100, 100, 100, 0.1);
+  max-width: 100% !important;
+}

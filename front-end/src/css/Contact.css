@@ -1,0 +1,13 @@
+.form{
+  margin-top: 15%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.buttonSpacer{
+  margin-bottom: 50px !important;
+}
+
+.homeBtn{
+  display: none;
+}
