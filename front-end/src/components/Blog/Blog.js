@@ -87,7 +87,7 @@ class Blog extends React.Component{
           </div>
         </div>
 
-        <div style={{marginTop: -80}}>
+        <div class="collapsableDiv">
           <div class="row">
             <div class="col-md-8 colLeft">
               <ShowBlog
