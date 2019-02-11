@@ -82,7 +82,7 @@ class About extends React.Component{
               <p>Providing the steps necessary to safely bring students back into the classroom.</p>
               <a onClick={this.handleLinkClick}>
                 <img className="logoLarge left" src={Book} />
-                <img className="logoLarge" src={Amazon} />
+                <img className="logoLarge amazon" src={Amazon} />
               </a>
             </div>
           </div>

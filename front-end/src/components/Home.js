@@ -32,8 +32,8 @@ class Home extends React.Component{
         <div className="container">
           <div className="row align-items-center " style={{marginTop: 0}}>
             <div className="col panel titleScreen">
-              <h1 class="display-4">Concussion Competencies</h1>
-              <h5 style={{paddingBottom: 10}}><strong>A framework for school-based concussion management</strong></h5>
+              <h1 class="display-4 mobileShrinkH3">Concussion Competencies</h1>
+              <h5 style={{paddingBottom: 10}} class="mobileShrinkH6"><strong>A framework for school-based concussion management</strong></h5>
             </div>
           </div>
           <div className="row row align-items-center" style={{marginTop: 0}}>
