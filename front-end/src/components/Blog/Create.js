@@ -24,20 +24,29 @@ class Create extends React.Component {
     );
   }
 
+  renderModal = () => {
+    if(this.props.currentUserId == 115089269998867004817){
+      return(
+        <Modal
+            title="Write a Post!"
+            content= {this.renderForm()}
+            onDismiss={() => history.push('/blog')}
+        />
+      );
+    }
+  }
+
   render(){
     return(
-      <Modal
-          title="Write a Post!"
-          content= {this.renderForm()}
-          onDismiss={() => history.push('/blog')}
-      />
+      <div>{this.renderModal()}</div>
     );
   };
 }
 
 const mapStateToProps = (state) => {
   return {
-    posts: Object.values(state.blog)
+    posts: Object.values(state.blog),
+    currentUserId: state.auth.userId
   };
 }
 
