@@ -14,7 +14,7 @@ import Background from '../img/greenBack.png';
 import Header from './Header';
 
 class About extends React.Component{
-  state = {aLink: ''}
+  state = {aLink: 'https://www.amazon.com/Concussion-Competencies-school-based-concussion-management/dp/1727607090/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr='}
   componentDidMount(){
     const chosenClassStart= ["outer", "center", "outer"]
     this.props.changeClass(chosenClassStart);
@@ -29,10 +29,10 @@ class About extends React.Component{
       newALink = "";
     }else if(e.currentTarget.id == 2){
       chosenClassNew = ["outer", "outer", "center"];
-      newALink = "https://www.amazon.com/Concussion-Competencies-school-based-concussion-management/dp/1727607090/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=";
+      newALink = "";
     } else if(e.currentTarget.id == 1){
       chosenClassNew = ["outer", "center", "outer"];
-      newALink = "";
+      newALink = "https://www.amazon.com/Concussion-Competencies-school-based-concussion-management/dp/1727607090/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=";
     }
     console.log(e.currentTarget.id);
     this.setState({aLink: newALink});
@@ -59,7 +59,24 @@ class About extends React.Component{
         <div className="container">
           <div className="row row align-items-center">
 
+
             <div className={`col-md about panel ${this.props.chosenClass[0]}`} onClick={this.handleClick} id='0'>
+              <h3>Who Are We</h3>
+              <p>We provide the knowledge & guidance to bring concussed students back to the classroom & the field.</p>
+              <img src={Students} className="centerImage"/>
+              <Link to='/aboutus'><p className='pLink blueText'>Author Bios</p></Link>
+            </div>
+
+            <div className={`col-md about panel ${this.props.chosenClass[1]}`} onClick={this.handleClick} id='1'>
+              <h1>Concussion Competencies</h1>
+              <p>Providing the steps necessary to safely bring students back into the classroom.</p>
+              <a onClick={this.handleLinkClick}>
+                <img className="logoLarge left" src={Book} />
+                <img className="logoLarge amazon" src={Amazon} />
+              </a>
+            </div>
+
+            <div className={`col-md about panel ${this.props.chosenClass[2]}`} onClick={this.handleClick} id='2'>
               <h3>Consulting</h3>
               <p>Helping teachers and coaches identify concussion and providing them with the tools and protocol to bring students back to school safely.</p>
               <img className="logo" src={Consulting} />
@@ -68,22 +85,6 @@ class About extends React.Component{
                 Could Your School Use Help?
               </Link>
 
-            </div>
-
-            <div className={`col-md about panel ${this.props.chosenClass[1]}`} onClick={this.handleClick} id='1'>
-              <h1>What We Do</h1>
-              <p>We provide the knowledge & guidance to bring concussed students back to the classroom & the field.</p>
-              <img src={Students} className="centerImage"/>
-              <Link to='/aboutus'><p className='pLink blueText'>Who Are We?</p></Link>
-            </div>
-
-            <div className={`col-md about panel ${this.props.chosenClass[2]}`} onClick={this.handleClick} id='2'>
-              <h3>Return To Learn Manual</h3>
-              <p>Providing the steps necessary to safely bring students back into the classroom.</p>
-              <a onClick={this.handleLinkClick}>
-                <img className="logoLarge left" src={Book} />
-                <img className="logoLarge amazon" src={Amazon} />
-              </a>
             </div>
           </div>
         </div>
