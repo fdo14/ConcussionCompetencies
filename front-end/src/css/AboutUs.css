@@ -44,6 +44,6 @@ body{
   }
 }
 
-.nameLink{
-  color: #6a7f96;
+.header{
+  color: #6a7f96 !important;
 }
