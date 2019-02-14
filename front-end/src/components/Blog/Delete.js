@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { deletePost } from '../../actions';
 import _ from 'lodash';
+import { Link } from 'react-router-dom';
 
 
 import Modal from '../Modal';
@@ -9,7 +10,9 @@ import history from '../../history';
 
 class Edit extends React.Component {
   componentDidMount(){
+    if(this.props.location.state){
       var blogId = this.props.location.state.blogId;
+    }
   }
 
   onClick = () => {
@@ -32,13 +35,32 @@ class Edit extends React.Component {
     );
   }
 
+  renderDelete(){
+    if(this.props.location.state){
+      return(
+        <Modal
+            title="Delete"
+            content= {this.renderForm()}
+            onDismiss={() => history.push('/blog')}
+        />
+      );
+    } else {
+      return(
+        <div class="ui negative message">
+          <i class="close icon"></i>
+          <div class="header">
+            You shouldn't be here!
+          </div>
+          <p>Please return home</p>
+          <Link to="/" class="fluid ui button">Home</Link>
+      </div>
+    );
+    }
+  }
+
   render(){
     return(
-      <Modal
-          title="Delete"
-          content= {this.renderForm()}
-          onDismiss={() => history.push('/blog')}
-      />
+      <div>{this.renderDelete()}</div>
     );
   };
 }

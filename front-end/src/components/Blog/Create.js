@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createPost, fetchPosts } from '../../actions';
+import { Link } from 'react-router-dom';
 
 import CreateForm from './CreateForm'
 import Modal from '../Modal';
@@ -24,14 +25,35 @@ class Create extends React.Component {
     );
   }
 
+  renderModal = () => {
+    if(this.props.currentUserId == 115089269998867004817){
+      return(
+        <Modal
+            title="Write a Post!"
+            content= {this.renderForm()}
+            onDismiss={() => history.push('/blog')}
+        />
+      );
+    } else {
+      return(
+        <div class="ui negative message">
+          <i class="close icon"></i>
+          <div class="header">
+            You shouldn't be here!
+          </div>
+          <p>Please return home</p>
+          <Link to="/" class="fluid ui button">Home</Link>
+      </div>
+    );
+    }
+  }
+
 
   render(){
     return(
-      <Modal
-          title="Write a Post!"
-          content= {this.renderForm()}
-          onDismiss={() => history.push('/blog')}
-      />
+      <div>
+        {this.renderModal()}
+      </div>
     );
   };
 }
