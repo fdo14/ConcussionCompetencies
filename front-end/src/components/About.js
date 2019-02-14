@@ -61,7 +61,7 @@ class About extends React.Component{
 
 
             <div className={`col-md about panel ${this.props.chosenClass[0]}`} onClick={this.handleClick} id='0'>
-              <h3>Who Are We</h3>
+              <h3>Who Are We?</h3>
               <p>We provide the knowledge & guidance to bring concussed students back to the classroom & the field.</p>
               <img src={Students} className="centerImage"/>
               <Link to='/aboutus'><p className='pLink blueText'>Author Bios</p></Link>

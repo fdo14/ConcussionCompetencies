@@ -12,7 +12,7 @@ export const AboutUsCard = (props) => {
           <img src={props.picture} />
         </div>
         <div class="content">
-          <Link to={`/aboutus/${props.firstName}`} class="header">{props.name}</Link>
+          <Link to={`/aboutus/${props.firstName}`} class="header nameLink">{props.name}</Link>
           <div class="meta">
             <span class="date">Joined in {props.date}</span>
           </div>
