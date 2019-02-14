@@ -24,21 +24,14 @@ class Create extends React.Component {
     );
   }
 
-  renderModal = () => {
-    if(this.props.currentUserId == 115089269998867004817){
-      return(
-        <Modal
-            title="Write a Post!"
-            content= {this.renderForm()}
-            onDismiss={() => history.push('/blog')}
-        />
-      );
-    }
-  }
 
   render(){
     return(
-      <div>{this.renderModal()}</div>
+      <Modal
+          title="Write a Post!"
+          content= {this.renderForm()}
+          onDismiss={() => history.push('/blog')}
+      />
     );
   };
 }
