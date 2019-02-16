@@ -62,14 +62,14 @@ class About extends React.Component{
 
             <div className={`col-md about panel ${this.props.chosenClass[0]}`} onClick={this.handleClick} id='0'>
               <h3>Who Are We?</h3>
-              <p>We provide the knowledge & guidance to bring concussed students back to the classroom & the field.</p>
+              <p>We are an interdisciplinary team providing knowledge and guidance regarding best practice in concussion management.</p>
               <img src={Students} className="centerImage"/>
               <Link to='/aboutus'><p className='pLink blueText'>Author Bios</p></Link>
             </div>
 
             <div className={`col-md about panel ${this.props.chosenClass[1]}`} onClick={this.handleClick} id='1'>
               <h1>Concussion Competencies</h1>
-              <p>Providing the steps necessary to safely bring students back into the classroom.</p>
+              <p>Providing the steps necessary to bring students safely back to the classroom and the field.</p>
               <a onClick={this.handleLinkClick}>
                 <img className="logoLarge left" src={Book} />
                 <img className="logoLarge amazon" src={Amazon} />
@@ -78,7 +78,8 @@ class About extends React.Component{
 
             <div className={`col-md about panel ${this.props.chosenClass[2]}`} onClick={this.handleClick} id='2'>
               <h3>Consulting</h3>
-              <p>Helping teachers and coaches identify concussion and providing them with the tools and protocol to bring students back to school safely.</p>
+              <p>We collaborate with schools to develop effective teams and protocols to meet the needs of students and athletes
+              after concussion.</p>
               <img className="logo" src={Consulting} />
               <Link to="/contact" className="ui basic button btnBottom">
                 <i className="icon phone volume"></i>

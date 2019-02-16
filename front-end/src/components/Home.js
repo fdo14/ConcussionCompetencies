@@ -45,12 +45,18 @@ class Home extends React.Component{
                 <div className="col-sm-3" onClick={() => window.open('https://www.amazon.com/Concussion-Competencies-school-based-concussion-management/dp/1727607090/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=','mywindow')}>
                   <img src={Book} className="bookDisplay"/>
                 </div>
+
                 <div className="col-sm-9 squishLeft">
-                Concussions happen. Is your school ready to manage them properly?
-
-Our book, Concussion Competencies, aims to help schools develop best-practice strategies to address the challenge of concussions in schools. 10 empirically supported competencies necessary in concussion management are delineated for:
-
-School Superintendents, Boards, and Administrators, Athletic Directors and Coaches, Teachers, Licensed and Ancillary Health Care Providers, Parents and Students
+                <div>
+                  Concussions happen. Is your school ready to manage them properly?
+                </div>
+                Our book, Concussion Competencies, aims to help schools develop best-practice strategies to address the challenge
+                of concussions in schools. 10 empirically supported competencies necessary for concussion management are delineated
+                for:
+                <div>
+                School Superintendents, Boards, and Administrators, Athletic Directors and Coaches, Teachers, Licensed and
+                Ancillary Health Care Providers, Parents and Students.
+                </div>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createComment, fetchComments, deleteComment } from '../../../actions';
+import { createComment, fetchComments, deleteComment, signIn } from '../../../actions';
 import { Link } from 'react-router-dom';
 
 class CommentsList extends React.Component{
@@ -50,6 +50,15 @@ class CommentsList extends React.Component{
             </div>
           </div>
         );
+      } else {
+        return(
+          <div class="ui warning message">
+            <i class="close icon"></i>
+            <div class="header">
+              You must <a onClick={this.onSignInClick}>login</a> before you can comment.
+            </div>
+          </div>
+        )
       }
   }
 
@@ -111,4 +120,4 @@ const mapStateToProps = state => {
     isSignedIn: state.auth.isSignedIn
   }
 }
-export default connect(mapStateToProps, { fetchComments, createComment, deleteComment})(CommentsList);
+export default connect(mapStateToProps, { fetchComments, createComment, deleteComment, signIn})(CommentsList);
