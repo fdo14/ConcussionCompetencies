@@ -55,7 +55,7 @@ class CommentsList extends React.Component{
           <div class="ui warning message">
             <i class="close icon"></i>
             <div class="header">
-              You must <a onClick={this.auth.signIn}>login</a> before you can comment.
+              You must <a onClick={this.props.signIn}>login</a> before you can comment.
             </div>
           </div>
         )
