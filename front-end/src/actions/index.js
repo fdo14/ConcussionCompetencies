@@ -55,7 +55,7 @@ export const createPost = (formValues, postArray) => async (dispatch, getState) 
 
       console.log(postArray.length);
 
-      const response = await axios.post("https://142.93.90.49:5001/api/putData", {
+      const response = await axios.post("https://www.concussioncompetencies.com:5001/api/putData", {
         id: idToBeAdded,
         message: formValues.message,
         name: formValues.name,
@@ -63,7 +63,7 @@ export const createPost = (formValues, postArray) => async (dispatch, getState) 
         date: today
       });
 
-      await axios.post("https://142.93.90.49:5001/api/putComment", {
+      await axios.post("https://www.concussioncompetencies.com:5001/api/putComment", {
         id: idToBeAdded
       });
 
@@ -73,13 +73,13 @@ export const createPost = (formValues, postArray) => async (dispatch, getState) 
 };
 
 export const fetchPosts = () => async dispatch => {
-  fetch("https://142.93.90.49:5001/api/getData")
+  fetch("https://www.concussioncompetencies.com:5001/api/getData")
       .then(data => data.json())
       .then(res => dispatch({type: FETCH_POSTS, payload: res.data}));
 }
 
 export const fetchComments = () => async dispatch => {
-  fetch("https://142.93.90.49:5001/api/getComments")
+  fetch("https://www.concussioncompetencies.com:5001/api/getComments")
       .then(data => data.json())
       .then(res => dispatch({type: FETCH_COMMENTS, payload: res.data}));
 }
@@ -94,7 +94,7 @@ export const editPost = (idToUpdate, formValues, postArray) => async dispatch =>
       }
     });
 
-    const response = await axios.post("https://142.93.90.49:5001/api/updateData", {
+    const response = await axios.post("https://www.concussioncompetencies.com:5001/api/updateData", {
       id: objIdToUpdate,
       update: {
         message: formValues.message,
@@ -117,7 +117,7 @@ export const deletePost = (idTodelete, postArray) => async dispatch => {
     });
 
 
-    await axios.delete("https://142.93.90.49:5001/api/deleteData", {
+    await axios.delete("https://www.concussioncompetencies.com:5001/api/deleteData", {
       data: {
         id: objIdToDelete
       }
@@ -135,7 +135,7 @@ export const deleteComment = (idTodelete, commentArray, title, userId) => async 
     }
   });
 
-  await axios.delete("https://142.93.90.49:5001/api/deleteComment", {
+  await axios.delete("https://www.concussioncompetencies.com:5001/api/deleteComment", {
     data: {
       id: objIdToDelete,
       title: title,
@@ -174,7 +174,7 @@ export const createComment = (userId, comment, postArray, googleId) => async dis
     googleId: googleId
   }
 
-  const response = await axios.post("https://142.93.90.49:5001/api/addArrayElement",{
+  const response = await axios.post("https://www.concussioncompetencies.com:5001/api/addArrayElement",{
     id: objIdToDelete,
     comment: commentObj,
   });
