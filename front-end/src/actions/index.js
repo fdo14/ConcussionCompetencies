@@ -63,7 +63,7 @@ export const createPost = (formValues, postArray) => async (dispatch, getState) 
         date: today
       });
 
-      await axios.post("http://142.93.90.49:5001/api/putComment", {
+      await axios.post("https://142.93.90.49:5001/api/putComment", {
         id: idToBeAdded
       });
 

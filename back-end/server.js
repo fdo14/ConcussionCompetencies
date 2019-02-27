@@ -5,11 +5,25 @@ const logger = require("morgan");
 const Data = require("./data");
 const Comment = require("./comments");
 
+const fs = require('fs');
+const http = require('http');
+const https = require('https');
+
 const API_PORT = 5001;
 const app = express();
 const router = express.Router();
 
 var cors = require('cors');
+
+const privateKey = fs.readFileSync('../keys/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('../keys/cert.pem', 'utf8');
+const ca = fs.readFileSync('../keys/chain.pem', 'utf8');
+
+const credentials = {
+	key: privateKey,
+	cert: certificate,
+	ca: ca
+};
 
 
 // this is our MongoDB database
@@ -150,8 +164,12 @@ router.get("/getComments", (req, res) => {
   });
 });
 
-// append /api for our http requests
 app.use("/api", router);
 
+
+const httpsServer = https.createServer(credentials, app);
+
+// append /api for our http requests
+
 // launch our backend into a port
-app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+httpsServer.listen(API_PORT, () => console.log(`LISTENING ON PORT 69`));
