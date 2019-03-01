@@ -167,7 +167,7 @@ router.get("/getComments", (req, res) => {
 app.use("/api", router);
 
 
-const httpsServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
 
 // append /api for our http requests
 

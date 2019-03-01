@@ -34,9 +34,9 @@ httpServer.listen(8080, () => {
 	console.log('HTTP Server running on port 69');
 });
 
-httpsServer.listen(443, () => {
+/*httpsServer.listen(443, () => {
 	console.log('HTTPS Server running on port 443');
-});
+});*/
 
 /*function ensureSecure(req, res, next){
   if(req.secure){
