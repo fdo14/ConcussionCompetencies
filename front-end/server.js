@@ -30,7 +30,7 @@ const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
 
-httpServer.listen(80, () => {
+httpServer.listen(8080, () => {
 	console.log('HTTP Server running on port 69');
 });
 
@@ -38,7 +38,7 @@ httpsServer.listen(443, () => {
 	console.log('HTTPS Server running on port 443');
 });
 
-function ensureSecure(req, res, next){
+/*function ensureSecure(req, res, next){
   if(req.secure){
     // OK, continue
     return next();
@@ -46,4 +46,4 @@ function ensureSecure(req, res, next){
   // handle port numbers if you need non defaults
   // res.redirect('https://' + req.host + req.url); // express 3.x
   res.redirect('https://' + req.hostname + req.url); // express 4.x
-}
+}*/
